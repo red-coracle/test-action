@@ -1,0 +1,14 @@
+name: 'Test Action'
+description: 'Does stuff'
+inputs:
+  msg:
+    description: 'Message to use'
+    required: false
+    default: 'foo bar baz'
+  github-token:
+    description: The GitHub token
+    required: false
+    default: ${{ github.token }}
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
